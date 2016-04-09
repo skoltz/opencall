@@ -1,5 +1,0 @@
-class UserPreferenceController < ApplicationController
-
-
-
-end

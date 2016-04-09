@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
 
-  devise_for :users 
-  
-  resources :users do
-    resources :user_preferences, only: :update
-  end
+  devise_for :users, controllers: { registrations: "registrations" }
+
+
+  resources :user_preferences, only: [:update, :show, :new]
 
   root to: 'home#index'
   # The priority is based upon order of creation: first created -> highest priority.

@@ -2,6 +2,7 @@ class CreateUserPreferences < ActiveRecord::Migration
   def change
     create_table :user_preferences do |t|
     	
+        t.integer :user_id
     	t.integer :phone_number
     	t.string :cell_carrier
     	t.string :gender
